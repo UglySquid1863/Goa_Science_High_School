@@ -1,0 +1,14 @@
+# Android artifacts
+*.apk
+*.ap_
+*.dex
+*.thumbdata*
+Thumbs.db
+storage/
+.android/
+
+# Web/Editor temps
+*.swp
+*.swo
+*~
+.DS_Store

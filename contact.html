@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Goa Science High School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+<nav>
+    <div class="logo">
+        <img src="images/logo.jpg" alt="Goa Science High School Logo">
+        Goa Science High School
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="activities.html">Activities</a></li>
+	<li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <section class="section">
+        <h2>Contact Us</h2>
+        <p>Location: Tagongtong, Goa, Camarines Sur</p>
+        <p>Phone: 09120213248 | 09983568410</p>
+        <p>Email: <a href="mailto:304555@deped.com.ph">304555@deped.com.ph</a></p>
+        <img src="images/contact.jpg" alt="Contact Image">
+        <div class="social">
+            <a href="https://www.facebook.com/GoaScienceHighSchoo" target="_blank">Facebook</a>
+        </div>
+        
+        <h3>Send a Message</h3>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Come and Visit! © 2025 Goa Science High School by Franshane Mikee Obado. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent! (Demo mode - contact admin for real submission.)');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - Goa Science High School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/logo.jpg" alt="Goa Science High School Logo"> Goa Science High School</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h2>Academics</h2>
+        <h3>Knowledge for Every Level</h3>
+        <div class="tabs">
+            <button class="active" onclick="showTab('junior')">Junior High (7-10)</button>
+            <button onclick="showTab('senior')">Senior High (11-12)</button>
+        </div>
+        
+        <div id="junior" class="tab-content active">
+            <h3>Junior High School (Grades 7–10)</h3>
+            <p>With an active support system for development, focusing on SCIENCE, TECHNOLOGY, and MATHEMATICS. Check out our juniors in action!</p>
+            <!-- NEW: Junior High Students Image Integrated Here -->
+            <img src="images/academics/junior-students.jpg" alt="Junior High Students" class="tab-image">
+        </div>
+        
+        <div id="senior" class="tab-content">
+            <h3>Senior High School (Grades 11–12)</h3>
+            <p>Academic Track strands: Science, Technology, Engineering and Mathematics (STEM) and Accountancy and Business Management (ABM). Preparing for college and careers—seniors leading the way!</p>
+            <!-- NEW: Senior High Students Image Integrated Here -->
+            <img src="images/academics/senior-students.jpg" alt="Senior High Students" class="tab-image">
+        </div>
+
+        <!-- Existing Signature Events & Expos (Preserved) -->
+        <h3>Signature Events & Expos</h3>
+        <p>Our students shine in practical applications—feel the innovation in SciMath and business seminars.</p>
+        
+        <div class="gallery-grid">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><img src="images/academics/science-magic.jpg" alt="Science Magic Show"></div>
+                    <div class="card-back">
+                        <h3>SciMath Magic</h3>
+                        <p>Senior high stars perform experiments that wow—blending science with showmanship for memorable learning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><img src="images/academics/abm-expo.jpg" alt="ABM Product Expo"></div>
+                    <div class="card-back">
+                        <h3>ABM Product Expo Seminar</h3>
+                        <p>ABM students network and innovate at expos—gaining real-world business insights for future success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Come and Visit! © 2023 Goa Science High School. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+        showTab('junior'); // Default
+    </script>
+</body>
+</html>
