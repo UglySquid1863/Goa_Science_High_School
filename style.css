@@ -18,21 +18,13 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-
-nav {
   background: #3498db;
   padding: 10px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Links wrap on small screens */
   justify-content: center;
   gap: 10px;
 }
-
 nav a {
   color: white;
   text-decoration: none;
@@ -40,11 +32,10 @@ nav a {
   padding: 8px 12px;
   white-space: nowrap;
 }
-
 /* Mobile screens */
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;
+    flex-direction: column; /* Stack links vertically */
     align-items: center;
   }
   nav a {
@@ -53,7 +44,6 @@ nav a {
     padding: 10px;
   }
 }
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
