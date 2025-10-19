@@ -23,6 +23,35 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+
+nav {
+  background: #3498db;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
 }
 
 .logo {
