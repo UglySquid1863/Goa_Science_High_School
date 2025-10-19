@@ -18,7 +18,7 @@ header {
 }
 
 nav {
-  background: #3498db;
+  background: 2c3e50;
   padding: 10px;
   display: flex;
   flex-wrap: wrap; /* Links wrap on small screens */
@@ -33,7 +33,7 @@ nav a {
   white-space: nowrap;
 }
 /* Mobile screens */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   nav {
     flex-direction: column; /* Stack links vertically */
     align-items: center;
@@ -67,7 +67,7 @@ ul a:hover {
 }
 
 .section {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 2rem auto;
     padding: 2rem;
     background: white;
@@ -453,7 +453,7 @@ form button {
 }
 
 /* Mobile tweaks */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hero h1 { font-size: 2.5rem; }
     .hero .motto { font-size: 1.2rem; }
     .hero::before { background: rgba(44, 62, 80, 0.9); } /* Stronger tint on small screens */
@@ -576,6 +576,79 @@ form button {
     .timeline-item { width: 100%; left: 0 !important; padding-left: 40px; }
     .timeline-item::before { left: 10px; }
 }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f4f4f4; line-height: 1.6; }
+header { background: #3498db; padding: 10px; }
+nav { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+.logo { display: flex; align-items: center; gap: 10px; color: white; font-size: clamp(1rem, 3vw, 1.2rem); font-weight: bold; flex-shrink: 0; }
+.logo img { width: 40px; height: 40px; border-radius: 50%; }
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  overflow-x: auto; /* Ensures horizontal scrolling */
+  white-space: nowrap; /* Keeps buttons in a single row */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+  padding: 0 10px; /* Adds padding for scroll area */
+  flex-grow: 1;
+}
+nav ul li {
+  flex-shrink: 0; /* Prevents buttons from shrinking */
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: clamp(14px, 4vw, 16px);
+  padding: 10px 15px;
+  border-radius: 5px;
+  min-width: 90px; /* Larger tap target */
+  text-align: center;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1); /* Slight background for visibility */
+  transition: background 0.3s;
+}
+nav ul li a:hover { background: #2980b9; }
+.hero { position: relative; min-height: 50vh; background: url('images/hero-school-bg.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1; }
+.hero-content { position: relative; z-index: 2; padding: 20px; }
+.hero h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); text-shadow: 0 0 10px black; }
+.motto { font-size: clamp(1rem, 3vw, 1.3rem); margin: 10px 0; }
+.hero-buttons { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.apply-btn, .explore-btn { background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: clamp(14px, 4vw, 16px); cursor: pointer; }
+.explore-btn:hover, .apply-btn:hover { background: #2980b9; }
+.teasers { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+.teaser-card { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.teaser-card h3 { font-size: clamp(1.2rem, 4vw, 1.5rem); margin-bottom: 10px; }
+.teaser-card p { font-size: clamp(0.9rem, 3vw, 1rem); }
+.teaser-card a { color: #3498db; text-decoration: none; font-weight: bold; }
+footer { background: #333; color: white; text-align: center; padding: 10px; font-size: clamp(0.8rem, 3vw, 0.9rem); }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px; max-width: 1200px; margin: 0 auto; }
+.card { perspective: 1000px; height: 250px; cursor: pointer; }
+.card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+.card.flipped .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; }
+.card-front { background: white; }
+.card-back { transform: rotateY(180deg); background: #3498db; color: white; display: flex; align-items: center; justify-content: center; padding: 15px; text-align: center; }
+img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.contact { padding: 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
+.contact-form { display: flex; flex-direction: column; gap: 10px; max-width: 500px; margin: 20px auto; }
+.contact-form input, .contact-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: clamp(14px, 4vw, 16px); }
+.contact-form button { background: #3498db; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+@media (max-width: 768px) {
+  nav { flex-direction: column; align-items: center; }
+  .logo { margin-bottom: 10px; }
+  nav ul { flex-direction: row; width: 100%; overflow-x: auto; }
+  nav ul li a { padding: 10px 12px; min-width: 80px; }
+  .hero { min-height: 40vh; }
+  .hero h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .motto { font-size: clamp(0.9rem, 3vw, 1.1rem); }
+  .hero-buttons { flex-direction: column; gap: 8px; }
+}
+@media (max-width: 480px) {
+  nav ul li a { font-size: 14px; padding: 8px 10px; min-width: 70px; }
+  .teaser-card { padding: 15px; }
+  .gallery { grid-template-columns: 1fr; }
+} 
 }
 
 
